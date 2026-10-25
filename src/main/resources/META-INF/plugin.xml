@@ -1,31 +1,15 @@
-<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<!-- Plugin Configuration File -->
 <idea-plugin>
-    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
     <id>su.dng.demo1</id>
+    <name>Demo1 — Say Hello</name>
+    <vendor url="https://github.com/GDennik">GDennik</vendor>
 
-    <!-- Public plugin name should be written in Title Case.
-     Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
-    <name>Demo1</name>
-
-    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor url="https://www.yourcompany.com">YourCompany</vendor>
-
-    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
-         Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
     <description><![CDATA[
-        Enter short description for your plugin here.<br>
-        <em>most HTML tags may be used</em>
-        ]]></description>
+        Простой плагин для IntelliJ IDEA, демонстрирующий создание пользовательского действия в контекстном меню редактора.
+        При вызове показывает приветственное диалоговое окно.
+    ]]></description>
 
-    <!-- Product and plugin compatibility requirements.
-         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
-
-    <resource-bundle>messages.MyMessageBundle</resource-bundle>
-
-    <!-- Extensions defined by the plugin.
-         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
-    <extensions defaultExtensionNs="com.intellij" />
 
     <actions>
         <action id="su.dng.demo1.HelloAction"
@@ -35,5 +19,4 @@
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
     </actions>
-
 </idea-plugin>
